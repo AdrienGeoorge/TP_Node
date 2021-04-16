@@ -1,0 +1,14 @@
+<%- include('./partial/head') %>
+<a href="/">Return to list</a>
+<h1><%= advert.title %></h1>
+<p>Description : <%= advert.description %></p>
+
+<div>Address : <%= advert.address %></div>
+<div>ZIP Code : <%= advert.zipCode %></div>
+<div>City : <%= advert.city %></div>
+<div>Prix : <%= advert.price %></div>
+
+<a href="/update/<%= advert._id %>">Update</a>
+<button type="button" onclick="deleteAdvert('<%= advert._id %>')">
+    Delete
+</button>

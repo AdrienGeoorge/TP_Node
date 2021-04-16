@@ -1,0 +1,36 @@
+<%- include('./partial/head') %>
+<h1>Update advert n°<%= advert._id %></h1>
+
+<form>
+    <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" value="<%= advert.title %>"/>
+    </div>
+
+    <div>
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="10"><%= advert.description %></textarea>
+    </div>
+
+    <div>
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" value="<%= advert.address %>"/>
+    </div>
+
+    <div>
+        <label for="zipCode">ZIP Code</label>
+        <input type="text" name="zipCode" id="zipCode" value="<%= advert.zipCode %>"/>
+    </div>
+
+    <div>
+        <label for="city">City</label>
+        <input type="text" name="city" id="city" value="<%= advert.city %>"/>
+    </div>
+
+    <div>
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" value="<%= advert.price %>"/>
+    </div>
+
+    <button type="submit" onclick="updateAdvert('<%= advert._id %>')">Update</button>
+</form>

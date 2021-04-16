@@ -1,0 +1,17 @@
+<%- include('./partial/head') %>
+<h1>Adverts list</h1>
+<a href="/create">Create a new advert</a>
+
+<ul>
+    <% adverts.forEach((advert) => { %>
+        <li>
+            <h2><%= advert.title %></h2>
+            <p><%= advert.description %></p>
+            <a href="/show/<%= advert._id %>">Show</a>
+            <a href="/update/<%= advert._id %>">Update</a>
+            <button type="button" onclick="deleteAdvert('<%= advert._id %>')">
+                Delete
+            </button>
+        </li>
+    <% }) %>
+</ul>
